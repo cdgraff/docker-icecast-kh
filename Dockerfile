@@ -24,7 +24,7 @@ MAINTAINER Daniel Lopez Monagas <zokeber@gmail.com>
 # Update OS
 RUN yum update -y
 
-# Install packages neccesary to compiled Icecast with support aac+
+# Install packages necessary to compile Icecast with support to AAC+
 RUN yum install -y git curl libcurl libcurl-devel libtheora libtheora-devel speex speex-devel libxml2 libxml2-devel libxslt libxslt-devel libogg libogg-devel libvorbis libvorbis-devel
 
 # Install development tools
