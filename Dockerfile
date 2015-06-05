@@ -25,10 +25,10 @@ MAINTAINER Daniel Lopez Monagas <zokeber@gmail.com>
 RUN yum update -y
 
 # Install packages necessary to compile Icecast with support to AAC+
-RUN yum install -y git curl libcurl libcurl-devel libtheora libtheora-devel speex speex-devel libxml2 libxml2-devel libxslt libxslt-devel libogg libogg-devel libvorbis libvorbis-devel
+RUN yum install -y git curl libcurl libcurl-devel libtheora libtheora-devel speex speex-devel libxml2 libxml2-devel libxslt libxslt-devel libogg libogg-devel libvorbis libvorbis-devel && yum clean all
 
 # Install development tools
-RUN yum groupinstall -y "Development tools"
+RUN yum groupinstall -y "Development tools" && yum clean all
 
 # Download icecast-kh
 RUN wget --directory-prefix=/root/ -c https://github.com/karlheyes/icecast-kh/archive/icecast-2.4.0-kh1.tar.gz
